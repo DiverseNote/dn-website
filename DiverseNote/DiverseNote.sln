@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverseNote.Api", "DiverseNote.Api\DiverseNote.Api.csproj", "{923DD8A1-51E6-417E-AE4B-575A3EF65CB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverseNote.Data", "DiverseNote.Data\DiverseNote.Data.csproj", "{AED3D55A-AEC9-4916-8231-9C218D46EE25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverseNote.Objects", "DiverseNote.Objects\DiverseNote.Objects.csproj", "{AFD21AB9-81D7-41D3-8894-0ADDA0FE1D0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverseNote.Business", "DiverseNote.Business\DiverseNote.Business.csproj", "{674D4DE7-5259-4CD1-B5D3-AB456B6806D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverseNote.Web", "DiverseNote.Web\DiverseNote.Web.csproj", "{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{923DD8A1-51E6-417E-AE4B-575A3EF65CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923DD8A1-51E6-417E-AE4B-575A3EF65CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923DD8A1-51E6-417E-AE4B-575A3EF65CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923DD8A1-51E6-417E-AE4B-575A3EF65CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED3D55A-AEC9-4916-8231-9C218D46EE25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED3D55A-AEC9-4916-8231-9C218D46EE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED3D55A-AEC9-4916-8231-9C218D46EE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED3D55A-AEC9-4916-8231-9C218D46EE25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD21AB9-81D7-41D3-8894-0ADDA0FE1D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD21AB9-81D7-41D3-8894-0ADDA0FE1D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD21AB9-81D7-41D3-8894-0ADDA0FE1D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD21AB9-81D7-41D3-8894-0ADDA0FE1D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{674D4DE7-5259-4CD1-B5D3-AB456B6806D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{674D4DE7-5259-4CD1-B5D3-AB456B6806D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{674D4DE7-5259-4CD1-B5D3-AB456B6806D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{674D4DE7-5259-4CD1-B5D3-AB456B6806D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

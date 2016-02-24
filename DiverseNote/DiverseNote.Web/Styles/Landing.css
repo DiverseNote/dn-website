@@ -1,0 +1,29 @@
+﻿.landing-container {
+    background-color: white;
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.landing-row{
+    padding-bottom:0;
+    padding-top:0;
+}
+
+.banner {
+    background-image: url('../Images/Candidates/top_banner.jpg');
+    opacity: 0.85;
+    text-align:center;
+    vertical-align:middle;
+    background-size:cover;
+    color:white;
+    height:550px;
+}
+
+.banner-tagline{
+    color: white;
+}
+
+.sub-banner{
+    background-color:white;
+    opacity:95;
+}

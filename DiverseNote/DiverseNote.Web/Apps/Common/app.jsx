@@ -1,0 +1,20 @@
+﻿jQuery = require('jquery');
+$ = jQuery;
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Candidates = require('./../Candidates/candidates.jsx');
+var CandidateRegistration = require('./../CandidateRegister/candidateRegister.jsx');
+var Landing = require('./../Landing/landing.jsx');
+var RouteHandler = require('react-router').RouteHandler;
+
+var App = React.createClass({
+    render: function () {
+        return (
+                <div className="app-container">                                                               
+                        <RouteHandler />
+                </div>
+            );
+    }
+});
+
+module.exports = App;
