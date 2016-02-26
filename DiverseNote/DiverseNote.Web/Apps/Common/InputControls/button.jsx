@@ -1,7 +1,7 @@
 ﻿"use strict";
 
 var React = require('react');
-var Link = require('react-router-component').Link;
+//var Link = require('react-router-component').Link;
 
 var Button = React.createClass({
     propTypes: {
