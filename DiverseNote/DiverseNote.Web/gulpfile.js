@@ -14,15 +14,14 @@ var config = {
     paths: {
         html: './Apps/*.html',
         js: [
-            './wwwroot/lib/jQuery/dist/jquery.js',
-            './wwwroot/lib/bootstrap/dist/js/bootstrap.js'
+            './node_modules/bootstrap/dist/js/bootstrap.js'//TODO: Can we use require for this instead?
         ],
         css:[
-            './wwwroot/lib/bootstrap/dist/css/bootstrap.min.css',
-            './wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css',
+            './node_modules/bootstrap/dist/css/bootstrap.min.css',
+            './node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
             './Styles/*.css'
         ],
-        fonts: './wwwroot/lib/bootstrap/dist/fonts/*',
+        fonts: './node_modules/bootstrap/dist/fonts/*',
         images: './Images/**/*',
         dist: './dist',
         mainJs: './Apps/main.jsx'

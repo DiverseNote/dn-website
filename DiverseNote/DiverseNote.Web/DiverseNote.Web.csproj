@@ -135,7 +135,6 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include=".bowerrc" />
-    <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="Scripts\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="Scripts\bootstrap\css\bootstrap-theme.min.css.map" />
