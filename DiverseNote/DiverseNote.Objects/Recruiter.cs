@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DiverseNote.Objects.SearchCriteria;
-
-namespace DiverseNote.Objects
+﻿namespace DiverseNote.Objects
 {
     public class Recruiter
     {
