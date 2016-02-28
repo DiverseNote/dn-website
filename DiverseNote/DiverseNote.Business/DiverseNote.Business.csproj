@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RecruiterProvider.cs" />
     <Compile Include="SearchCriteria\CandidateCriteria.cs" />
     <Compile Include="CandidateProvider.cs" />
     <Compile Include="ICandidateProvider.cs" />

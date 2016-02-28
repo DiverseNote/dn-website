@@ -185,6 +185,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\RecruitersController.cs" />
     <Compile Include="Controllers\CandidatesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,6 +218,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DiverseNote.Business\DiverseNote.Business.csproj">
+      <Project>{674d4de7-5259-4cd1-b5d3-ab456b6806d7}</Project>
+      <Name>DiverseNote.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DiverseNote.Objects\DiverseNote.Objects.csproj">
       <Project>{afd21ab9-81d7-41d3-8894-0adda0fe1d0e}</Project>
       <Name>DiverseNote.Objects</Name>

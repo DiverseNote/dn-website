@@ -25,6 +25,6 @@ namespace DiverseNote.Business
         public void UpdateCandidate(Candidate candidate)
         {
             throw new NotImplementedException();
-        }
+        }        
     }
 }
