@@ -1,7 +1,6 @@
 ﻿jQuery = require('jquery');
 $ = jQuery;
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Candidates = require('./../Candidates/candidates.jsx');
 var CandidateRegistration = require('./../CandidateRegister/candidateRegister.jsx');
 var Landing = require('./../Landing/landing.jsx');
