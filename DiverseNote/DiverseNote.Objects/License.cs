@@ -1,4 +1,4 @@
-﻿namespace DiverseNote.Object
+﻿namespace DiverseNote.Objects
 {
     public class License
     {

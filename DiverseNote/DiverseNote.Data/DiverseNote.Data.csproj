@@ -60,11 +60,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DatabaseNames.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="RecruiterContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DiverseNote.Objects\DiverseNote.Objects.csproj">
+      <Project>{afd21ab9-81d7-41d3-8894-0adda0fe1d0e}</Project>
+      <Name>DiverseNote.Objects</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

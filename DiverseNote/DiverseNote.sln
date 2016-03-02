@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverseNote.Business", "Div
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverseNote.Web", "DiverseNote.Web\DiverseNote.Web.csproj", "{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8009CB10-6890-49AE-8300-AF1F74CE7C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverseNote.Data.Test", "DiverseNote.Data.Test\DiverseNote.Data.Test.csproj", "{0AC3EEDE-ABAC-449D-B5DC-01BAE89F4989}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,8 +43,15 @@ Global
 		{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58F1D9A8-DD97-4689-9463-403A6E6BC0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC3EEDE-ABAC-449D-B5DC-01BAE89F4989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC3EEDE-ABAC-449D-B5DC-01BAE89F4989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC3EEDE-ABAC-449D-B5DC-01BAE89F4989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC3EEDE-ABAC-449D-B5DC-01BAE89F4989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0AC3EEDE-ABAC-449D-B5DC-01BAE89F4989} = {8009CB10-6890-49AE-8300-AF1F74CE7C86}
 	EndGlobalSection
 EndGlobal

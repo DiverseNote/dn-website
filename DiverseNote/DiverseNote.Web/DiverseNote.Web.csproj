@@ -105,20 +105,6 @@
     <Content Include="Images\Candidates\top_banner.jpg" />
     <Content Include="Images\DN_LogoTag-small.png" />
     <Content Include="Images\DN_LogoTag.gif" />
-    <Content Include="Scripts\bootstrap\css\bootstrap-theme.css" />
-    <Content Include="Scripts\bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="Scripts\bootstrap\css\bootstrap.css" />
-    <Content Include="Scripts\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Scripts\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Scripts\bootstrap\js\bootstrap.js" />
-    <Content Include="Scripts\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Scripts\bootstrap\js\npm.js" />
-    <Content Include="Scripts\griddle\griddle.js" />
-    <Content Include="Scripts\jquery\jquery.js" />
-    <Content Include="Scripts\jquery\jquery.min.js" />
-    <Content Include="Scripts\react\react-dom.min.js" />
-    <Content Include="Scripts\react\react.min.js" />
-    <Content Include="Scripts\underscore\underscore-min.js" />
     <Content Include="Styles\BlockItemList.css" />
     <Content Include="Styles\DiverseNote.css" />
     <Content Include="Styles\Landing.css" />
@@ -136,15 +122,6 @@
     <Content Include="packages.config" />
     <Content Include=".bowerrc" />
     <Content Include="package.json" />
-    <Content Include="Scripts\bootstrap\css\bootstrap-theme.css.map" />
-    <Content Include="Scripts\bootstrap\css\bootstrap-theme.min.css.map" />
-    <Content Include="Scripts\bootstrap\css\bootstrap.css.map" />
-    <Content Include="Scripts\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="Scripts\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Scripts\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Scripts\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Scripts\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Scripts\jquery\jquery.min.map" />
     <Content Include="Apps\CandidateRegister\candidateRegister.jsx" />
     <Content Include="Apps\CandidateRegister\candidateRegisterForm.jsx" />
     <None Include="Apps\Candidates\candidateItem.jsx" />
@@ -191,6 +168,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Dist\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

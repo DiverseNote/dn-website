@@ -1,5 +1,4 @@
-﻿using DiverseNote.Object;
-
+﻿
 namespace DiverseNote.Objects
 {
     public class UserInfo
