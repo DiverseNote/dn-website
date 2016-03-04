@@ -1,12 +1,14 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace DiverseNote.Objects
 {
-    public class Recruiter : IMongoDocument
+    public class Recruiter : IEntity
     {
-        [BsonId]
-        public ObjectId Id { get; set; }
+        public string Id { get; set; }
+
+        public DateTime ModifiedDate { get; set; }
 
         public int RecruiterId { get; set; }
 

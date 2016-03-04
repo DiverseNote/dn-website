@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DiverseNote.Objects;
+using DiverseNote.Data;
 
 namespace DiverseNote.Business
 {
     public class RecruiterProvider
     {
+        private IDataContext<Recruiter> _recruiterContext;
+
+        public RecruiterProvider(IDataContext<Recruiter> recruiterContext)
+        {
+            _recruiterContext = recruiterContext;
+        }
+
         public void AddRecruiter(Recruiter recruiter)
         {
             throw new NotImplementedException();

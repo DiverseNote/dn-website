@@ -1,4 +1,4 @@
-﻿namespace DiverseNote.Objects
+﻿namespace DiverseNote.Objects.Constants
 {
     public struct Constants
     {

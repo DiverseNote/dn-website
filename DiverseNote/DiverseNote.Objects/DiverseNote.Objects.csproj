@@ -53,8 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candidate.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="Education.cs" />
+    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="College.cs" />
     <Compile Include="Experience.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Job.cs" />

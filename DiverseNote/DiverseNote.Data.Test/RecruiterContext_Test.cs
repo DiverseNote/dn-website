@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using DiverseNote.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Bson;
@@ -13,21 +14,16 @@ namespace DiverseNote.Data.Test
     {
         [TestMethod]
         [TestCategory("Integration")]
-        public void AddRecruiter_Success()
+        public async Task GetRecruitersTest_RecruitersExist()
         {
-           
+            var recruiterContext = new DataContext<Recruiter>();
+            
+             var recruiterId = await recruiterContext.InsertOne(new Recruiter {FirstName = "TestFirstName", LastName = "TestLastName", OrganizationId = 1});
+            
+            var recruiters = recruiterContext.FindMany(x => x.Id == recruiterId);
+
+            Assert.IsNotNull(recruiterId);
+            Assert.IsTrue(recruiters.Any());
         }
-
-        [TestMethod]
-        [TestCategory("Integration")]
-        public void GetRecruitersTest_RecruitersExist()
-        {
-            var recruiterContext = new RecruiterContext();
-            recruiterContext.DeleteAll();
-            recruiterContext.InsertRecruiter(new Recruiter {FirstName = "Allen", LastName = "Lee", OrganizationId = 1});
-
-            var recruiters = recruiterContext.GetRecruiters();
-
-            Assert.IsTrue(recruiters.Any());}
     }
 }
