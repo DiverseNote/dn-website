@@ -1,7 +1,11 @@
-﻿namespace DiverseNote.Objects
+﻿using System;
+
+namespace DiverseNote.Objects
 {
     public class License
     {
-        public int MyProperty { get; set; }
+        public int Id { get; set; }
+
+        public DateTime ExpirationDate { get; set; }
     }
 }

@@ -7,9 +7,9 @@ namespace DiverseNote.Business
 {
     public class RecruiterProvider
     {
-        private IDataContext<Recruiter> _recruiterContext;
+        private IRepository<Recruiter> _recruiterContext;
 
-        public RecruiterProvider(IDataContext<Recruiter> recruiterContext)
+        public RecruiterProvider(IRepository<Recruiter> recruiterContext)
         {
             _recruiterContext = recruiterContext;
         }

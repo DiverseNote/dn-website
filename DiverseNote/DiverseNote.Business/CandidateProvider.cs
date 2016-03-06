@@ -1,25 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using DiverseNote.Objects;
 using DiverseNote.Objects.SearchCriteria;
+using DiverseNote.Data;
 
 namespace DiverseNote.Business
 {
     public class CandidateProvider
     {
-        public int AddCandidate(Candidate candidate, UserInfo userInfo)
+        private readonly IRepository<Candidate> _candidateRepository;
+
+        public CandidateProvider(IRepository<Candidate> candidateRepository)
         {
-            throw new NotImplementedException();
+            _candidateRepository = candidateRepository;
         }
 
-        public Candidate GetCandidate(int candidateId, UserInfo userInfo)
+        public async Task<string> AddCandidate(Candidate candidate, UserInfo userInfo)
         {
-            throw new NotImplementedException();
+            return await _candidateRepository.InsertOneAsync(candidate);
         }
 
-        public IEnumerable<Candidate> GetCandidates(CandidateCriteria candidateCriteria, UserInfo userInfo)
+        public async Task<Candidate> GetCandidate(string candidateId, UserInfo userInfo)
         {
-            throw new NotImplementedException();
+            return await _candidateRepository.FindOneAsync(x => x.Id == candidateId);
+        }
+
+        public async Task<IEnumerable<Candidate>> GetCandidates(CandidateCriteria candidateCriteria, UserInfo userInfo)
+        {
+            //TODO: pagination.  all candidates will be too large.
+            return await _candidateRepository.FindAsync(x => x.IsActive);
         }
 
         public void UpdateCandidate(Candidate candidate)

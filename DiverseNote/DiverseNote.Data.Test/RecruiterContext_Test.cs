@@ -16,14 +16,12 @@ namespace DiverseNote.Data.Test
         [TestCategory("Integration")]
         public async Task GetRecruitersTest_RecruitersExist()
         {
-            var recruiterContext = new DataContext<Recruiter>();
-            
-             var recruiterId = await recruiterContext.InsertOne(new Recruiter {FirstName = "TestFirstName", LastName = "TestLastName", OrganizationId = 1});
-            
-            var recruiters = recruiterContext.FindMany(x => x.Id == recruiterId);
+            var recruiterContext = new MongoRepository<Recruiter>();
+            var recruiterId = await recruiterContext.InsertOneAsync(new Recruiter {FirstName = "TestFirstName", LastName = "TestLastName", OrganizationId = 1});
+            var recruiter = await recruiterContext.FindOneAsync(x => x.Id == recruiterId);
 
             Assert.IsNotNull(recruiterId);
-            Assert.IsTrue(recruiters.Any());
+            Assert.IsNotNull(recruiter);
         }
     }
 }

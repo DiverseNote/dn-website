@@ -6,15 +6,21 @@ using System.Threading.Tasks;
 
 namespace DiverseNote.Objects
 {
-    public class Candidate
+    public class Candidate : IEntity
     {
-        public int CandidateId { get; set; }
+        public string Id { get; set; }
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
+
         public IEnumerable<Skill> Skills { get; set; }
+
         public IEnumerable<Experience> Experiences { get; set; }
+
         public IEnumerable<College> Educations { get; set; }
 
+        public bool IsActive { get; set; }
 
+        public DateTime ModifiedDate { get; set; }
     }
 }

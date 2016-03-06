@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -17,5 +18,7 @@ namespace DiverseNote.Objects
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public IEnumerable<Search> Searches { get; set; }
     }
 }

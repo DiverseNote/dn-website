@@ -61,9 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseNames.cs" />
-    <Compile Include="DataContext.cs" />
+    <Compile Include="MongoRepository.cs" />
     <Compile Include="Extensions\EntityExtensions.cs" />
-    <Compile Include="IDataContext.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
