@@ -1,4 +1,4 @@
-﻿namespace DiverseNote.IndexService.IndexEntities
+﻿namespace DiverseNote.Objects.Index
 {
     public interface IIndexEntity
     {

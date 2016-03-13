@@ -1,11 +1,7 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using DiverseNote.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MongoDB.Bson;
-using MongoDB.Driver;
-using DiverseNote.Data;
+using DiverseNote.Data.EntityRepositories;
 
 namespace DiverseNote.Data.Test
 {
@@ -16,7 +12,7 @@ namespace DiverseNote.Data.Test
         [TestCategory("Integration")]
         public async Task GetRecruitersTest_RecruitersExist()
         {
-            var recruiterContext = new MongoRepository<Recruiter>();
+            var recruiterContext = new RecruiterRepository();
             var recruiterId = await recruiterContext.InsertOneAsync(new Recruiter {FirstName = "TestFirstName", LastName = "TestLastName", OrganizationId = 1});
             var recruiter = await recruiterContext.FindOneAsync(x => x.Id == recruiterId);
 

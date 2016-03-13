@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using DiverseNote.Data.EntityRepositories;
 using DiverseNote.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -12,7 +13,7 @@ namespace DiverseNote.Data.Test
         [TestCategory("Integration")]
         public async Task GetRecruitersTest_RecruitersExist()
         {
-            var recruiterContext = new MongoRepository<Candidate>();
+            var recruiterContext = new CandidateRepository();
 
             var candidateId = await recruiterContext.InsertOneAsync(new Candidate
             {

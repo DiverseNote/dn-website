@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using DiverseNote.Data;
-using DiverseNote.Objects;
+using DiverseNote.Data.EntityRepositories;
+using DiverseNote.Data.EntityRepositories.Interfaces;
 
 namespace DiverseNote.Business.DependencyInjection
 {
@@ -9,12 +9,8 @@ namespace DiverseNote.Business.DependencyInjection
         public static void RegisterTypes()
         {
             var container = new ContainerBuilder();
-
-            container.RegisterType<MongoRepository<Recruiter>>().As<IRepository<Recruiter>>();
-            container.RegisterType<MongoRepository<Candidate>>().As<IRepository<Candidate>>();
-            container.RegisterType<MongoRepository<Skill>>().As<IRepository<Skill>>();
-            container.RegisterType<MongoRepository<Job>>().As<IRepository<Job>>();
-            container.RegisterType<MongoRepository<Organization>>().As<IRepository<Organization>>();
+            container.RegisterType<RecruiterRepository>().As<IRecruiterRepository>();
+            container.RegisterType<CandidateRepository>().As<ICandidateRepository>();
 
             container.Build();
         }

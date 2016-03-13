@@ -2,78 +2,69 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using DiverseNote.Data.Extensions;
 using DiverseNote.Objects;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
-using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 
 namespace DiverseNote.Data
 {
-    public class MongoRepository<T> : IRepository<T> where T : IEntity
+    public abstract class MongoRepository<T> where T : IEntity
     {
-        private readonly IMongoDatabase _database;
+        protected readonly IMongoDatabase Database;
         protected string DatabaseName = DatabaseNames.DiverseNote;
-        protected string DocumentCollectionName = typeof(T).GetCollectionName();
+        protected string DocumentCollectionName;
 
-        public MongoRepository()
+        protected MongoRepository()
         {
-            SetMappings();
             var mongoClient = new MongoClient();
-            _database = mongoClient.GetDatabase(DatabaseName);
-            
+            Database = mongoClient.GetDatabase(DatabaseName);
         }
 
-        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> whereClause)
+        public virtual async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> whereClause)
         {
-           return await _database.GetCollection<T>(DocumentCollectionName).Find(whereClause).ToListAsync();
+           var results = await Database.GetCollection<T>(DocumentCollectionName).FindAsync(whereClause);
+           return results.ToEnumerable();
         }
 
-        public IEnumerable<T> Find(Expression<Func<T, bool>> whereClause)
+        public virtual IEnumerable<T> Find(Expression<Func<T, bool>> whereClause)
         {
-            return _database.GetCollection<T>(DocumentCollectionName).Find(whereClause).ToList();
+            return Database.GetCollection<T>(DocumentCollectionName).Find(whereClause).ToEnumerable();
         }
 
-        public async Task<T> FindOneAsync(Expression<Func<T, bool>> whereClause)
+        public virtual async Task<T> FindOneAsync(Expression<Func<T, bool>> whereClause)
         {
-            return await _database.GetCollection<T>(DocumentCollectionName).Find(whereClause).FirstOrDefaultAsync();
+            var results = await Database.GetCollection<T>(DocumentCollectionName).FindAsync(whereClause);
+            return results.FirstOrDefault();
         }
 
-        public async Task<string> InsertOneAsync(T document)
+        public virtual async Task<string> InsertOneAsync(T document)
         {
             document.Id = ObjectId.GenerateNewId().ToString();
-            var documents = _database.GetCollection<T>(DocumentCollectionName);
+            var documents = Database.GetCollection<T>(DocumentCollectionName);
             await documents.InsertOneAsync(document);
             return document.Id;
         }
 
-        public async Task InsertManyAsync(IEnumerable<T> documents)
+        public virtual async Task InsertManyAsync(IEnumerable<T> documents)
         {
-            var recruiters = _database.GetCollection<T>(DocumentCollectionName);
+            var recruiters = Database.GetCollection<T>(DocumentCollectionName);
             await recruiters.InsertManyAsync(documents);
         }
 
-        public async Task DeleteAsync(string id)
+        public virtual async Task DeleteAsync(string id)
         {
-            var documents = _database.GetCollection<T>(DocumentCollectionName);
+            var documents = Database.GetCollection<T>(DocumentCollectionName);
             await documents.FindOneAndDeleteAsync(x => x.Id == id);
         }
 
-        public async Task UpdateAsync(Expression<Func<T, bool>> whereClause, T document)
+        public virtual async Task UpdateAsync(Expression<Func<T, bool>> whereClause, T document)
         {
-            var documents = _database.GetCollection<T>(DocumentCollectionName);
+            var documents = Database.GetCollection<T>(DocumentCollectionName);
             await documents.ReplaceOneAsync(whereClause, document);
         }
-        
-        private void SetMappings()
-        {
-            BsonClassMap.RegisterClassMap<T>(cm =>
-            {
-                cm.AutoMap();
-                cm.IdMemberMap.SetSerializer(new StringSerializer(BsonType.ObjectId));
-            });
-        }
 
+        protected abstract void SetMappings();
+
+        protected abstract string GetCollectionTypeName();
     }
 }

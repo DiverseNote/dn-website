@@ -61,6 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseNames.cs" />
+    <Compile Include="EntityRepositories\CandidateRepository.cs" />
+    <Compile Include="EntityRepositories\Interfaces\IRecruiterRepository.cs" />
+    <Compile Include="EntityRepositories\RecruiterRepository.cs" />
+    <Compile Include="EntityRepositories\Interfaces\ICandidateRepository.cs" />
     <Compile Include="MongoRepository.cs" />
     <Compile Include="Extensions\EntityExtensions.cs" />
     <Compile Include="IRepository.cs" />

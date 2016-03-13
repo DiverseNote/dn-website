@@ -6,6 +6,7 @@ namespace DiverseNote.Data.Extensions
 {
     public static class EntityExtensions
     {
+        //In the case that an entity name is changed the entity will still map to the same collection 
         private static readonly Dictionary<string, string> CollectionNames = new Dictionary<string, string>
         {
             {typeof(Candidate).Name, "candidates"},
@@ -18,9 +19,9 @@ namespace DiverseNote.Data.Extensions
             {typeof(Skill).Name, "skills"}
         }; 
          
-        public static string GetCollectionName(this Type entityName)
+        public static string GetCollectionName(this Type entityType)
         {
-            return CollectionNames[entityName.Name];
+            return CollectionNames[entityType.Name];
         }
     }
 }
