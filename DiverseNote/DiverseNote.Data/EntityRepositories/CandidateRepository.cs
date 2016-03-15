@@ -25,7 +25,7 @@ namespace DiverseNote.Data.EntityRepositories
                 .Find(whereClause).Skip(pageNumber > 0 ? ((pageNumber - 1) * pageSize) : 0)
                 .Limit(pageSize).ToEnumerable();
         }
-
+        
         protected override string GetCollectionTypeName()
         {
             return typeof(Candidate).GetCollectionName();

@@ -20,6 +20,6 @@ namespace DiverseNote.Data
 
         Task DeleteAsync(string id);
 
-        Task UpdateAsync(Expression<Func<T, bool>> whereClause, T document);
+        Task UpdateAsync(T document);
     }
 }

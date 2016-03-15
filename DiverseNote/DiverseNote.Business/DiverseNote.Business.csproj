@@ -53,9 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInjection\AutofacConfig.cs" />
+    <Compile Include="Interfaces\ICandidateProvider.cs" />
     <Compile Include="RecruiterProvider.cs" />
     <Compile Include="CandidateProvider.cs" />
-    <Compile Include="ICandidateProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\CandidateCriteria.cs" />
     <Compile Include="Search\CriteriaExpresssionProvider.cs" />

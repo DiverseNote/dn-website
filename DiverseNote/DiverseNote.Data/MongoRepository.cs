@@ -57,10 +57,10 @@ namespace DiverseNote.Data
             await documents.FindOneAndDeleteAsync(x => x.Id == id);
         }
 
-        public virtual async Task UpdateAsync(Expression<Func<T, bool>> whereClause, T document)
+        public virtual async Task UpdateAsync(T document)
         {
             var documents = Database.GetCollection<T>(DocumentCollectionName);
-            await documents.ReplaceOneAsync(whereClause, document);
+            await documents.ReplaceOneAsync(x => x.Id == document.Id, document);
         }
 
         protected abstract void SetMappings();

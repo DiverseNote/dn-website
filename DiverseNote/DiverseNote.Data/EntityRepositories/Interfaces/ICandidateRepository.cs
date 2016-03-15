@@ -15,6 +15,6 @@ namespace DiverseNote.Data.EntityRepositories.Interfaces
         Task<string> InsertOneAsync(Candidate document);
         Task InsertManyAsync(IEnumerable<Candidate> documents);
         Task DeleteAsync(string id);
-        Task UpdateAsync(Expression<Func<Candidate, bool>> whereClause, Candidate document);
+        Task UpdateAsync(Candidate document);
     }
 }

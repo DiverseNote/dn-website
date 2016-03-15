@@ -12,9 +12,9 @@ var config = {
     port: 62785,
     devBaseUrl: 'http://localhost',
     paths: {
-        html: './Apps/*.html',
+        html: './Apps/components/*.html',
         js: [
-            './node_modules/bootstrap/dist/js/bootstrap.js'//TODO: Can we use require for this instead?
+            './node_modules/bootstrap/dist/js/bootstrap.js'//TODO: Replace with require for react-bootstrap
         ],
         css:[
             './node_modules/bootstrap/dist/css/bootstrap.min.css',

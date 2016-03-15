@@ -7,6 +7,7 @@ var Button = React.createClass({
     propTypes: {
         label: React.PropTypes.string.isRequired,
         id: React.PropTypes.string.isRequired,
+        onclick: React.PropTypes.func,
         size: React.PropTypes.string,
         route: React.PropTypes.string
     },
@@ -17,7 +18,7 @@ var Button = React.createClass({
             if(this.props.route !== undefined)
                 control = (<a className="btn btn-primary" href={this.props.route}>{this.props.label}</a>);
             else
-                control = (<button type="button" class="btn btn-primary">{this.props.label}</button>);
+                control = (<button type="button" className="btn btn-primary" onClick={this.props.onclick}>{this.props.label}</button>);
         
             return (control);
 }

@@ -1,4 +1,7 @@
-﻿using System.Web.Http;
+﻿using System.Reflection;
+using System.Web.Http;
+using Autofac;
+using Autofac.Integration.WebApi;
 using Microsoft.Owin.Security.OAuth;
 using DiverseNote.Business.DependencyInjection;
 
@@ -12,8 +15,7 @@ namespace DiverseNote.Api
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
-            AutofacConfig.RegisterTypes();
-
+            
             // Web API routes
             config.MapHttpAttributeRoutes();
 

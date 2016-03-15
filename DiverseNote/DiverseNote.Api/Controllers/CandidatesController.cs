@@ -1,11 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Http;
+using DiverseNote.Business.Interfaces;
 using DiverseNote.Objects;
 
 namespace DiverseNote.Api.Controllers
 {
     public class CandidatesController : ApiController
     {
+        private readonly ICandidateProvider _candidateProvider;
+        public CandidatesController(ICandidateProvider candidateProvider)
+        {
+            _candidateProvider = candidateProvider;
+        }
+
         // GET: api/Candidates
         public IHttpActionResult Get()
         {
@@ -14,24 +23,59 @@ namespace DiverseNote.Api.Controllers
         }
 
         // GET: api/Candidates/5
-        public string Get(int id)
+        public async Task<IHttpActionResult> Get(string id)
         {
-            return "value";
+            try
+            {
+                var candidate = await _candidateProvider.GetCandidateAsync(id, new UserInfo());
+                return Ok(candidate);
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
 
         // POST: api/Candidates
-        public void Post([FromBody]string value)
+        public async Task<IHttpActionResult> Post([FromBody]Candidate candidate)
         {
+            try
+            {
+                var id = await _candidateProvider.AddCandidateAsync(candidate, new UserInfo());
+                return Ok(id);
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
 
         // PUT: api/Candidates/5
-        public void Put(int id, [FromBody]string value)
+        public async Task<IHttpActionResult> Put(string id, [FromBody]Candidate candidate)
         {
+            try
+            {
+                await _candidateProvider.UpdateCandidateAsync(candidate, new UserInfo());
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
 
         // DELETE: api/Candidates/5
-        public void Delete(int id)
+        public async Task<IHttpActionResult> Delete(string id)
         {
+            try
+            {
+                await _candidateProvider.DeleteCandidateAsync(id, new UserInfo());
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
     }
 }

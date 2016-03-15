@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -32,6 +33,7 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +100,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apps\actions\candidateActions.js" />
+    <Content Include="Apps\constants\actionTypes.js" />
     <Content Include="Apps\index.html" />
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
@@ -122,30 +126,31 @@
     <Content Include="packages.config" />
     <Content Include=".bowerrc" />
     <Content Include="package.json" />
-    <Content Include="Apps\CandidateRegister\candidateRegister.jsx" />
-    <Content Include="Apps\CandidateRegister\candidateRegisterForm.jsx" />
-    <None Include="Apps\Candidates\candidateItem.jsx" />
-    <Content Include="Apps\Candidates\candidates.jsx" />
-    <Content Include="Apps\Common\Layouts\LayoutComponents\navigationBar.jsx" />
-    <Content Include="Apps\Common\Layouts\LayoutComponents\pageTitle.jsx" />
-    <Content Include="Apps\Common\app.jsx" />
-    <Content Include="Apps\Candidates\searchCriteria.jsx" />
-    <Content Include="Apps\Landing\landing.jsx" />
-    <Content Include="Apps\Landing\banner.jsx" />
-    <Content Include="Apps\Candidate\candidate.jsx" />
-    <Content Include="Apps\Common\InputControls\textbox.jsx" />
-    <Content Include="Apps\Common\InputControls\multiselect.jsx" />
-    <Content Include="Apps\Common\InputControls\dropDownBox.jsx" />
-    <Content Include="Apps\Common\InputControls\button.jsx" />
-    <Content Include="Apps\Common\Layouts\LayoutComponents\footer.jsx" />
-    <Content Include="Apps\Common\Layouts\formLayout.jsx" />
+    <Content Include="Apps\components\candidateregister\candidateRegister.jsx" />
+    <Content Include="Apps\components\candidateregister\candidateRegisterForm.jsx" />
+    <Content Include="Apps\Api\candidateApi.jsx" />
+    <None Include="Apps\components\candidates\candidateItem.jsx" />
+    <Content Include="Apps\components\candidates\candidates.jsx" />
+    <Content Include="Apps\components\common\Layouts\LayoutComponents\navigationBar.jsx" />
+    <Content Include="Apps\components\common\Layouts\LayoutComponents\pageTitle.jsx" />
+    <Content Include="Apps\components\common\app.jsx" />
+    <Content Include="Apps\components\candidates\searchCriteria.jsx" />
+    <Content Include="Apps\components\landing\landing.jsx" />
+    <Content Include="Apps\components\landing\banner.jsx" />
+    <Content Include="Apps\components\candidate\candidate.jsx" />
+    <Content Include="Apps\components\common\InputControls\textbox.jsx" />
+    <Content Include="Apps\components\common\InputControls\multiselect.jsx" />
+    <Content Include="Apps\components\common\InputControls\dropDownBox.jsx" />
+    <Content Include="Apps\components\common\InputControls\button.jsx" />
+    <Content Include="Apps\components\common\Layouts\LayoutComponents\footer.jsx" />
+    <Content Include="Apps\components\common\Layouts\formLayout.jsx" />
     <None Include="Apps\main.jsx" />
-    <None Include="Apps\Candidates\candidateList.jsx" />
-    <Content Include="Apps\Candidates\adminOptions.jsx" />
+    <None Include="Apps\components\candidates\candidateList.jsx" />
+    <Content Include="Apps\components\candidates\adminOptions.jsx" />
     <Content Include="eslint.json" />
-    <Content Include="Apps\Common\routes.jsx" />
-    <Content Include="Apps\Register\register.jsx" />
-    <Content Include="Apps\Register\registerForm.jsx" />
+    <Content Include="Apps\components\common\routes.jsx" />
+    <Content Include="Apps\components\register\register.jsx" />
+    <Content Include="Apps\components\register\registerForm.jsx" />
     <None Include="Properties\PublishProfiles\DiverseNote - Web Deploy.pubxml">
       <SubType>Designer</SubType>
     </None>
@@ -158,23 +163,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Apps\About\" />
-    <Folder Include="Apps\Billing\" />
-    <Folder Include="Apps\Contact\" />
-    <Folder Include="Apps\Mentoring\" />
-    <Folder Include="Apps\Press\" />
-    <Folder Include="Apps\Recruiter\" />
+    <Folder Include="Apps\components\about\" />
+    <Folder Include="Apps\components\billing\" />
+    <Folder Include="Apps\components\contact\" />
+    <Folder Include="Apps\components\mentoring\" />
+    <Folder Include="Apps\components\press\" />
+    <Folder Include="Apps\components\recruiter\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="controllers\" />
     <Folder Include="Dist\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
