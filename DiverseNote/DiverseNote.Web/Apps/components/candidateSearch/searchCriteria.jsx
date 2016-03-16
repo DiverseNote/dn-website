@@ -8,7 +8,7 @@ var Button = require('../common/InputControls/button.jsx');
 var SearchCriteria = React.createClass({
     propTypes: {
         onsubmit: React.PropTypes.func.isRequired,
-        onChange: React.PropTypes.func.isRequired
+        onchange: React.PropTypes.func.isRequired
     },
 
     render: function () {
@@ -20,7 +20,7 @@ var SearchCriteria = React.createClass({
 
         return (
            <form>
-                <TextBox id="keywordInput" value={this.props.criteria.keyword} onchange={this.props.onchange} label="Keywords" inputType="search" placeholder="Skills/Keywords" />
+                <TextBox id="keywordInput" value={this.props.criteria.keywords} propname="keywords" onchange={this.props.onchange} label="Keywords" inputType="search" placeholder="Skills/Keywords" />
                 <Button id="submitInput" label="Search" onclick={this.props.onsubmit} /> 
                 <br /> 
                 <TextBox id="roleInput" label="Role" inputType="search" placeholder="Role" />

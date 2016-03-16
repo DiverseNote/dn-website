@@ -20,7 +20,7 @@ var Candidates = React.createClass({
         return this.setState({criteria: this.state.criteria});
     },
     
-    searchCandidates: function (event) {
+    searchCandidates: function () {
         
         CandidateActions.search(this.state.criteria)
             .then(function searchSuccess(results) {
@@ -35,7 +35,7 @@ var Candidates = React.createClass({
         var candidates = (
            <div className="container">                
                    <div className="row">
-                       <div className="col-xs-12 col-sm-4 col-md-4"><SearchCriteria criteria={this.state.criteria} onChange={this.setCriteriaState} onsubmit={this.searchCandidates} /></div>
+                       <div className="col-xs-12 col-sm-4 col-md-4"><SearchCriteria criteria={this.state.criteria} onchange={this.setCriteriaState} onsubmit={this.searchCandidates} /></div>
                        <div className="col-xs-12 col-sm-8 col-md-8"><CandidateList candidates={this.state.searchResults} /></div>
                    </div>
            </div>
