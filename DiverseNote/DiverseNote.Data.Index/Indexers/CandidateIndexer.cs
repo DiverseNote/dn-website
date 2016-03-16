@@ -55,5 +55,16 @@ namespace DiverseNote.IndexService.Indexers
                 return jObject;
             });
         }
+
+        public void SetRankings(AlgoliaClient client)
+        {
+            var index = client.InitIndex(_candidateIndexName);
+            index.SetSettings(JObject.Parse(@"{""attributesToIndex"":
+               [""Skills"",
+                ""Description"", 
+                ""InterestedInLocations"",
+                ""InterestedInRoles""
+                ]}"));
+        }
     }
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using DiverseNote.Data.EntityRepositories.Interfaces;
 using DiverseNote.Objects;
-using DiverseNote.Data;
 
-namespace DiverseNote.Business
+namespace DiverseNote.Business.Providers
 {
     public class RecruiterProvider
     {
-        private IRepository<Recruiter> _recruiterContext;
+        private IRecruiterRepository _recruiterRepository;
 
-        public RecruiterProvider(IRepository<Recruiter> recruiterContext)
+        public RecruiterProvider(IRecruiterRepository recruiterRepository)
         {
-            _recruiterContext = recruiterContext;
+            _recruiterRepository = recruiterRepository;
         }
 
         public void AddRecruiter(Recruiter recruiter)

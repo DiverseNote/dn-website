@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace DiverseNote.Objects.Index
 {
     [JsonObject("candidate")]
-    public class IndexCandidate
+    public class IndexCandidate : IIndexEntity
     {
         [JsonProperty("objectID")]
         public string ObjectId => Id;

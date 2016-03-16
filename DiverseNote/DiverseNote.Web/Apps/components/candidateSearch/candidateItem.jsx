@@ -8,7 +8,6 @@ var CandidateItem = React.createClass({
                     <div className="list-group-item">                        
                         <table>
                         <tr>
-                            <td className="profile-image"><img className="img-responsive img-circle" height="100" width="90" src="../../../Images/Candidates/candidateHeadshot.png" /></td>
                             <td>
                                 <h3>{this.props.candidate.FirstName + " " +this.props.candidate.LastName}</h3>
                                 <div>Software Engineer</div>

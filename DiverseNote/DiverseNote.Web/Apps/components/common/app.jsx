@@ -1,7 +1,7 @@
 ﻿jQuery = require('jquery');
 $ = jQuery;
 var React = require('react');
-var Candidates = require('./../Candidates/candidates.jsx');
+var Candidates = require('./../CandidateSearch/candidates.jsx');
 var CandidateRegistration = require('./../CandidateRegister/candidateRegister.jsx');
 var Landing = require('./../Landing/landing.jsx');
 var RouteHandler = require('react-router').RouteHandler;

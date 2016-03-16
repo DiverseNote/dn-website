@@ -15,8 +15,7 @@ namespace DiverseNote.IndexService.ConversionExtensions
                 Description = candidate.Description,
                 Skills = candidate.Skills,
                 Educations = candidate.Educations,
-                Experiences = candidate.Experiences,
-
+                Experiences = candidate.Experiences
             };
         }
     }

@@ -11,20 +11,26 @@ namespace DiverseNote.Data.Test
     {
         [TestMethod]
         [TestCategory("Integration")]
-        public async Task GetRecruitersTest_RecruitersExist()
+        public async Task GetCandidatesTest_RecruitersExist()
         {
             var recruiterContext = new CandidateRepository();
 
             var candidateId = await recruiterContext.InsertOneAsync(new Candidate
             {
-                FirstName = "TestFirstName",
-                LastName = "TestLastName",
+                FirstName = "Toriano",
+                LastName = "Moore",
+                Description = "Senior Leader for 5 years",
                 IsActive = true,
                 Skills = new List<Skill>
                 {
                     new Skill
                     {
-                        Name = "Java",
+                        Name = "HTML5",
+                        IsProprietary = true
+                    },
+                    new Skill
+                    {
+                        Name = "CSS3",
                         IsProprietary = true
                     }
                 }

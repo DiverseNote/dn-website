@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Apps\actions\candidateActions.js" />
+    <Content Include="Apps\actions\userAction.js" />
     <Content Include="Apps\constants\actionTypes.js" />
     <Content Include="Apps\index.html" />
     <Content Include="Global.asax" />
@@ -128,13 +129,13 @@
     <Content Include="package.json" />
     <Content Include="Apps\components\candidateregister\candidateRegister.jsx" />
     <Content Include="Apps\components\candidateregister\candidateRegisterForm.jsx" />
-    <Content Include="Apps\Api\candidateApi.jsx" />
-    <None Include="Apps\components\candidates\candidateItem.jsx" />
-    <Content Include="Apps\components\candidates\candidates.jsx" />
+    <Content Include="Apps\api\candidateApi.jsx" />
+    <None Include="Apps\components\candidateSearch\candidateItem.jsx" />
+    <Content Include="Apps\components\candidateSearch\candidates.jsx" />
     <Content Include="Apps\components\common\Layouts\LayoutComponents\navigationBar.jsx" />
     <Content Include="Apps\components\common\Layouts\LayoutComponents\pageTitle.jsx" />
     <Content Include="Apps\components\common\app.jsx" />
-    <Content Include="Apps\components\candidates\searchCriteria.jsx" />
+    <Content Include="Apps\components\candidateSearch\searchCriteria.jsx" />
     <Content Include="Apps\components\landing\landing.jsx" />
     <Content Include="Apps\components\landing\banner.jsx" />
     <Content Include="Apps\components\candidate\candidate.jsx" />
@@ -145,8 +146,8 @@
     <Content Include="Apps\components\common\Layouts\LayoutComponents\footer.jsx" />
     <Content Include="Apps\components\common\Layouts\formLayout.jsx" />
     <None Include="Apps\main.jsx" />
-    <None Include="Apps\components\candidates\candidateList.jsx" />
-    <Content Include="Apps\components\candidates\adminOptions.jsx" />
+    <None Include="Apps\components\candidateSearch\candidateList.jsx" />
+    <Content Include="Apps\components\candidateSearch\adminOptions.jsx" />
     <Content Include="eslint.json" />
     <Content Include="Apps\components\common\routes.jsx" />
     <Content Include="Apps\components\register\register.jsx" />

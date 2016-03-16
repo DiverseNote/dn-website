@@ -4,6 +4,8 @@ var RegisterForm = require('./registerForm.jsx');
 var FormLayout = require('../Common/Layouts/formLayout.jsx');
 
 var Register = React.createClass({
+
+
     render: function () {
 
         var register = (<div className="container">               

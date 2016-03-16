@@ -2,6 +2,7 @@
 using System.Web.Http;
 using DiverseNote.Objects;
 using DiverseNote.Business;
+using DiverseNote.Business.Providers;
 
 namespace DiverseNote.Api.Controllers
 {

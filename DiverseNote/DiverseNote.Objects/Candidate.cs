@@ -18,6 +18,12 @@ namespace DiverseNote.Objects
 
         public IEnumerable<College> Educations { get; set; }
 
+        public IEnumerable<DiversityTypes> DiversityTypes { get; set; }
+
+        public IEnumerable<string> InterestedInLocations { get; set; }
+
+        public IEnumerable<string> InterestedInRoles { get; set; }
+        
         public bool IsDeleted { get; set; }
 
         public bool IsActive { get; set; }

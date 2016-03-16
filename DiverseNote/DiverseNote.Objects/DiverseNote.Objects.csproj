@@ -57,10 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candidate.cs" />
-    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="College.cs" />
     <Compile Include="Experience.cs" />
     <Compile Include="IEntity.cs" />
+    <Compile Include="Index\IndexCandidate - Copy.cs" />
     <Compile Include="Index\IndexCandidate.cs" />
     <Compile Include="Index\IndexEntity.cs" />
     <Compile Include="Job.cs" />

@@ -20,6 +20,7 @@ namespace DiverseNote.IndexService
         public void Start()
         {
             var client = new AlgoliaClient(_algoliaAppId, _algoliaApiKey);
+            _candidateIndexer.SetRankings(client);
             _candidateIndexer.Index(client);
         }
 

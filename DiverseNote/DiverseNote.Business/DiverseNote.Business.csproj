@@ -54,8 +54,8 @@
   <ItemGroup>
     <Compile Include="DependencyInjection\AutofacConfig.cs" />
     <Compile Include="Interfaces\ICandidateProvider.cs" />
-    <Compile Include="RecruiterProvider.cs" />
-    <Compile Include="CandidateProvider.cs" />
+    <Compile Include="Providers\RecruiterProvider.cs" />
+    <Compile Include="Providers\CandidateProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\CandidateCriteria.cs" />
     <Compile Include="Search\CriteriaExpresssionProvider.cs" />
@@ -63,6 +63,10 @@
     <Compile Include="Search\JobCriteria.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DiverseNote.Data.Indexing\DiverseNote.Data.Indexing.csproj">
+      <Project>{253104d9-86b0-40f2-8c5f-1d8db1c086e8}</Project>
+      <Name>DiverseNote.Data.Indexing</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DiverseNote.Data\DiverseNote.Data.csproj">
       <Project>{aed3d55a-aec9-4916-8231-9c218d46ee25}</Project>
       <Name>DiverseNote.Data</Name>

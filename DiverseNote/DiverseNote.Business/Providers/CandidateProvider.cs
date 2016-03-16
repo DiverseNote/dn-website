@@ -1,15 +1,17 @@
 ﻿using System.Threading.Tasks;
 using DiverseNote.Business.Interfaces;
+using DiverseNote.Data.EntityRepositories.Interfaces;
 using DiverseNote.Objects;
-using DiverseNote.Data;
+using DiverseNote.Data.Indexing.Indexers;
 
-namespace DiverseNote.Business
+namespace DiverseNote.Business.Providers
 {
     public class CandidateProvider : ICandidateProvider
     {
-        private readonly IRepository<Candidate> _candidateRepository;
+        private readonly ICandidateRepository _candidateRepository;
+        
 
-        public CandidateProvider(IRepository<Candidate> candidateRepository)
+        public CandidateProvider(ICandidateRepository candidateRepository)
         {
             _candidateRepository = candidateRepository;
         }
@@ -34,6 +36,7 @@ namespace DiverseNote.Business
             var candidate = await _candidateRepository.FindOneAsync(x => x.Id == id);
             candidate.IsDeleted = true;
             await _candidateRepository.UpdateAsync(candidate);
+            
         }
     }
 }

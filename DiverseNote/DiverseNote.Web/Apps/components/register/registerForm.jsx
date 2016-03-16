@@ -5,7 +5,6 @@ var TextBox = require('../Common/InputControls/textbox.jsx');
 var Button = require('../Common/InputControls/button.jsx');
 var RegisterForm = React.createClass({
     render: function () {
-
         return (
             <div className="panel panel-default panel-register">
                 <div className="panel-heading">
@@ -15,8 +14,7 @@ var RegisterForm = React.createClass({
                 <form>
                             <TextBox id="firstNameInput" label="First Name" inputType="text" />
                             <TextBox id="lastNameInput" label="Last Name" inputType="text" />
-                            <TextBox id="userNameInput" label="User Name" inputType="text" />
-                            <TextBox id="passwordInput" label="Password" inputType="password" />
+                            <TextBox id="emailInput" label="Email Address" inputType="email" />
                             <Button id="submitRegistrationInput" label="Create Account" route="#/CandidateRegister" />
                 </form>
               </div>

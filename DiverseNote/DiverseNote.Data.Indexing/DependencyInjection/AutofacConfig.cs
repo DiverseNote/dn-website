@@ -1,19 +1,19 @@
-﻿using Autofac;
+﻿using Algolia.Search;
+using Autofac;
 using DiverseNote.Data.EntityRepositories;
 using DiverseNote.Data.EntityRepositories.Interfaces;
+using DiverseNote.Data.Indexing.Mapping;
 
-namespace DiverseNote.Business.DependencyInjection
+namespace DiverseNote.Data.Indexing.DependencyInjection
 {
     public static class AutofacConfig
     {
         public static IContainer RegisterTypes()
         {
-            Data.Indexing.DependencyInjection.AutofacConfig.RegisterTypes();
-
             var container = new ContainerBuilder();
-            container.RegisterType<RecruiterRepository>().As<IRecruiterRepository>();
+            container.RegisterInstance(IndexTypeMapping.GetIndexTypeMapper());
             container.RegisterType<CandidateRepository>().As<ICandidateRepository>();
-
+            container.RegisterType<AlgoliaClient>().AsSelf();
             return container.Build();
         }
     }
