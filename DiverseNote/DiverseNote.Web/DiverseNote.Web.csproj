@@ -100,8 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Apps\actions\candidateActions.js" />
-    <Content Include="Apps\actions\userAction.js" />
+    <Content Include="Apps\actions\candidateactions.js" />
+    <Content Include="Apps\actions\typeaheadaction.js" />
+    <Content Include="Apps\actions\useraction.js" />
     <Content Include="Apps\constants\actionTypes.js" />
     <Content Include="Apps\index.html" />
     <Content Include="Global.asax" />
@@ -145,6 +146,7 @@
     <Content Include="Apps\components\common\InputControls\button.jsx" />
     <Content Include="Apps\components\common\Layouts\LayoutComponents\footer.jsx" />
     <Content Include="Apps\components\common\Layouts\formLayout.jsx" />
+    <Content Include="Apps\components\common\InputControls\typeaheadbox.jsx" />
     <None Include="Apps\main.jsx" />
     <None Include="Apps\components\candidateSearch\candidateList.jsx" />
     <Content Include="Apps\components\candidateSearch\adminOptions.jsx" />
