@@ -1,9 +1,10 @@
 ﻿var React = require('react');
-var Router = require('react-router');
+var ReactRouter = require('react-router');
+var ReactDOM = require('react-dom');
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
 var routes = require('./components/common/routes.jsx');
-
 var App = require('./components/common/app.jsx');
 
-Router.run(routes, function (Handler) {
-    React.render(<Handler />, document.getElementById('app'));
-});
+ReactDOM.render(<Router routes={routes} />, document.getElementById('app'));
+

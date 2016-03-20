@@ -12,7 +12,7 @@ var NavigationBar = React.createClass({
                         </div>
                           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul className="nav navbar-nav nav-links navbar-right">                                
-                                <li className="navbar-btn"><a className="nav-link" href="#/candidates">Recruit</a></li>
+                                <li className="navbar-btn"><a className="nav-link" href="#/candidatesearch">Find Candidates</a></li>
                                 <li className="navbar-btn"><a className="nav-link" href="#">Companies</a></li> 
                                 <li className="navbar-btn"><a className="nav-link" href="#">Colleges</a></li> 
                                 <li className="navbar-btn"><a className="nav-link" href="#">Mentoring</a></li>

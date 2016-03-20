@@ -2,15 +2,21 @@
 
 var React = require('react');
 var Router = require('react-router');
-var DefaultRoute = Router.DefaultRoute;
+var IndexRoute = Router.IndexRoute;
 var Route = Router.Route;
 
+var App = require('./app.jsx');
+var Landing = require('../landing/landing.jsx');
+var Candidates = require('../candidateSearch/candidates.jsx');
+var CandidateRegister = require('../candidateregister/candidateRegister.jsx');
+var Register = require('../register/register.jsx');
+
 var routes = (
-    <Route name="app" path="/" handler={require('./app.jsx')}>
-        <DefaultRoute handler={require('../Landing/landing.jsx')} />
-        <Route name="candidates" handler={require('./../CandidateSearch/candidates.jsx')} />
-        <Route name="candidateregister" handler={require('./../CandidateRegister/candidateRegister.jsx')} />
-        <Route name="register" handler={require('./../Register/register.jsx')} />  
+    <Route name="app" path="/" component={App}>
+        <IndexRoute component={Landing} />
+        <Route path="candidatesearch" component={Candidates} />
+        <Route path="candidateregister" component={CandidateRegister} />
+        <Route path="register" component={Register} />  
     </Route>
     );
 
