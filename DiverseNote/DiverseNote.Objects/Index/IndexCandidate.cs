@@ -21,6 +21,6 @@ namespace DiverseNote.Objects.Index
 
         public IEnumerable<Experience> Experiences { get; set; }
 
-        public IEnumerable<College> Educations { get; set; }
+        public IEnumerable<School> Schools { get; set; }
     }
 }

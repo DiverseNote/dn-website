@@ -15,7 +15,9 @@
 .forms-container{
     background-color: white;
     height:100%;
-    min-height:1200px /*todo: make this dynamic*/
+    min-height: 1200px; /*todo: make this dynamic*/
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 .profile-image{

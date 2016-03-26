@@ -35,6 +35,7 @@ namespace DiverseNote.Data.EntityRepositories
         {
             BsonClassMap.RegisterClassMap<Candidate>(cm =>
             {
+                cm.SetIgnoreExtraElements(true);//TODO: Important - Remove before first production push
                 cm.AutoMap();
                 cm.IdMemberMap.SetSerializer(new StringSerializer(BsonType.ObjectId));
             });

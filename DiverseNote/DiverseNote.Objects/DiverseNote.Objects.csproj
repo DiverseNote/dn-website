@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Candidate.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="College.cs" />
+    <Compile Include="School.cs" />
     <Compile Include="Experience.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Index\IndexCandidate - Copy.cs" />

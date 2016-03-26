@@ -10,7 +10,7 @@ namespace DiverseNote.Data.Extensions
         private static readonly Dictionary<string, string> CollectionNames = new Dictionary<string, string>
         {
             {typeof(Candidate).Name, "candidates"},
-            {typeof(College).Name, "colleges"},
+            {typeof(School).Name, "colleges"},
             {typeof(Experience).Name, "experience"},
             {typeof(Job).Name, "jobs"},
             {typeof(License).Name, "licenses"},

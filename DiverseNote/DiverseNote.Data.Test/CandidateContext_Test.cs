@@ -17,9 +17,9 @@ namespace DiverseNote.Data.Test
 
             var candidateId = await recruiterContext.InsertOneAsync(new Candidate
             {
-                FirstName = "Toriano",
-                LastName = "Moore",
-                Description = "Senior Leader for 5 years",
+                FirstName = "Bruce",
+                LastName = "Morgan",
+                Description = "Experience with financial modeling, derivatives, and real estate. Coding experience mainly with Rails & Meteor (associated work with Javascript/HTML/CSS/etc",
                 IsActive = true,
                 Skills = new List<Skill>
                 {

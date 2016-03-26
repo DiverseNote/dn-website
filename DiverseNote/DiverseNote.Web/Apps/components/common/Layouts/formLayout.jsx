@@ -27,9 +27,6 @@ var FormLayout = React.createClass({
                     <div className="row">
                          <div className="col-xs-12 col-sm-12 col-md-12">{this.props.content}</div>
                 </div>
-                 <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12"><Footer /></div>
-                 </div>
             </div>
             );
     }

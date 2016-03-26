@@ -91,7 +91,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="DependencyInjection\AutofacConfig.cs" />
     <Compile Include="Indexers\CandidateIndexProvider.cs" />
     <Compile Include="Indexers\ICandidateIndexProvider.cs" />

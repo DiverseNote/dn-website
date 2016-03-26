@@ -33,16 +33,14 @@ var Candidates = React.createClass({
 
     render: function () {
         var candidates = (
-           <div className="container">                
+        <div className="container">                
                    <div className="row">
                        <div className="col-xs-12 col-sm-4 col-md-4"><SearchCriteria criteria={this.state.criteria} onchange={this.setCriteriaState} onsubmit={this.searchCandidates} /></div>
                        <div className="col-xs-12 col-sm-8 col-md-8"><CandidateList candidates={this.state.searchResults} /></div>
                    </div>
            </div>
             );
-        return (
-            <FormLayout content={candidates} pageTitle="Recruiting" />
-            );
+        return (<FormLayout content={candidates} pageTitle="Recruiting" />);
     }
 });
 
