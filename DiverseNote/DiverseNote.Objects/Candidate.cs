@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace DiverseNote.Objects
 {
-    [BsonIgnoreExtraElements]
+    [BsonIgnoreExtraElements]//TODO: remove attribute before prod
     public class Candidate : IEntity
     {
         public string Id { get; set; }

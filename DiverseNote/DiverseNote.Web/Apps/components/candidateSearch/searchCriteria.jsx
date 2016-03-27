@@ -21,7 +21,6 @@ var SearchCriteria = React.createClass({
         return (
            <form>
                 <TextBox id="keywordInput" value={this.props.criteria.keywords} propname="keywords" onchange={this.props.onchange} label="Keywords" inputType="search" placeholder="Skills/Keywords" />
-                <Button id="submitInput" label="Search" onclick={this.props.onsubmit} /> 
                 <TextBox id="roleInput" label="Role" inputType="search" placeholder="Role" />
                 <TextBox id="locationInput" label="Location" inputType="search" placeholder="Zip Code, City or State" />
                 <MultiSelect id="experienceInput" label="Experience" inputType="checkbox" items={experienceItems} />
@@ -32,6 +31,8 @@ var SearchCriteria = React.createClass({
                 <MultiSelect id="disabledInput" label="Disabled?" inputType="checkbox" items={yesNoItems} />   
                 <MultiSelect id="veteranInput" label="US Military Veteran?" inputType="checkbox" items={yesNoItems} />
                 <MultiSelect id="lgbtqInput" label="A Member of the LGBTQ Community" inputType="checkbox" items={yesNoItems} />            
+           
+                <Button id="submitInput" submit="true" label="Search" onclick={this.props.onsubmit} />
            </form>
     );
     }

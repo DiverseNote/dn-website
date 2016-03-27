@@ -1,12 +1,16 @@
 ﻿
 .listItemLabel{
-    color: #341414;
+    color: #67A1D4;
     font-weight: bold;
 }
 
-.blockItem{    
+.blockItem .list-group{    
     margin-bottom:3px;
-    margin-top:3px;      
+    margin-top:3px;
+}
+
+.candidate-name-header {
+    color: #2567ae;
 }
 
 .search-item-title {
@@ -16,4 +20,12 @@
 .search-item-option {
     margin-left: 2px;
     margin-right: 2px;
+}
+
+.search-item-label {
+    width: 85%;
+}
+
+.search-item-content {
+    width: 100%;
 }
