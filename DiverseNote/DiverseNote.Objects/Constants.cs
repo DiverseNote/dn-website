@@ -6,7 +6,13 @@
         Unlimited
     }
 
-    public enum DiversityTypes
+    public enum Gender
+    {
+        Male,
+        Female
+    }
+
+    public enum EthnicityTypes
     {
         AfricanAmerican,
         Asian,
@@ -15,5 +21,13 @@
         NativeAmerican,
         Other,
         PacificIslander
+    }
+
+    public enum ExperienceLevel
+    {
+        Junior,
+        Intermediate,
+        Senior,
+        Executive
     }
 }

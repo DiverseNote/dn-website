@@ -22,7 +22,6 @@ var CandidateItem = React.createClass({
                                     <a href="" className="search-item-option">
                                     <span className="glyphicon glyphicon-star-empty"></span>
                                     </a>
-                                    <span className="glyphicon glyphicon-eye-open search-item-option" alt="viewed"></span>
                                  </span>
                                 </td>
                             </tr>

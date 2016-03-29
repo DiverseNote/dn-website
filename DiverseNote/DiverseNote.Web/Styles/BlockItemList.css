@@ -2,11 +2,17 @@
 .listItemLabel{
     color: #67A1D4;
     font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .blockItem .list-group{    
     margin-bottom:3px;
     margin-top:3px;
+}
+
+.list-group-item {
+    min-height: 160px;
 }
 
 .candidate-name-header {
@@ -18,8 +24,7 @@
 }
 
 .search-item-option {
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 5px;
 }
 
 .search-item-label {

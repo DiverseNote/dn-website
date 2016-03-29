@@ -147,6 +147,7 @@
     <Content Include="Apps\components\common\Layouts\LayoutComponents\footer.jsx" />
     <Content Include="Apps\components\common\Layouts\formLayout.jsx" />
     <Content Include="Apps\components\common\InputControls\typeaheadbox.jsx" />
+    <Content Include="Apps\components\common\InputControls\select.jsx" />
     <None Include="Apps\main.jsx" />
     <None Include="Apps\components\candidateSearch\candidateList.jsx" />
     <Content Include="Apps\components\candidateSearch\adminOptions.jsx" />

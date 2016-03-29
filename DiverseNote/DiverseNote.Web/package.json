@@ -6,6 +6,7 @@
     "bootstrap": "3.3.6",
     "react": "0.14.7",
     "react-dom": "0.14.7",
+    "react-checkbox-list": "0.0.2",
     "react-router": "2.0.1",
     "typeahead": "0.2.2",
     "bloodhound-js": "1.2.1",

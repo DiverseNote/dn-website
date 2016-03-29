@@ -1,29 +1,25 @@
 ﻿"use strict";
 
 var React = require('react');
+var CheckBoxList = require('react-checkbox-list');
 
 var MultiSelect = React.createClass({
     propTypes: {
-        label: React.PropTypes.string.isRequired,
-        inputType: React.PropTypes.string.isRequired,
+        label: React.PropTypes.string,
+        inputType: React.PropTypes.string,
         id: React.PropTypes.string.isRequired,
-        items: React.PropTypes.array
+        items: React.PropTypes.array,
+        onchange: React.PropTypes.func,
+        propname: React.PropTypes.string
     },
 
     render: function () {
-
-        var multiselectItems = [];
+        
         var id = this.props.id;
-        var inputType = this.props.inputType;
-        this.props.items.forEach(function (item) {
-            multiselectItems.push(<div className="checkbox" key={id + item.value}><label><input type="checkbox" value={item.value} />{item.text}</label></div>);
-            }
-        );
-
         return (       
                 <fieldset className="form-group">
-                <label htmlFor={this.props.id}>{this.props.label}</label>
-                    {multiselectItems}
+                <label htmlFor={id}>{this.props.label}</label>
+			        <CheckBoxList ref={id} name={this.props.propname} defaultData={this.props.items} onChange={this.props.onchange} />
                 </fieldset>
  );
     }

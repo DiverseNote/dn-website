@@ -9,6 +9,9 @@ namespace DiverseNote.Objects.Index
         [JsonProperty("objectID")]
         public string ObjectId => Id;
 
+        [JsonProperty("_tags")]
+        public IEnumerable<string> Tags { get; set; }
+
         public string Id { get; set; }
 
         public string FirstName { get; set; }
@@ -22,5 +25,7 @@ namespace DiverseNote.Objects.Index
         public IEnumerable<Experience> Experiences { get; set; }
 
         public IEnumerable<School> Schools { get; set; }
+
+        public ExperienceLevel? ExperienceLevel { get; set; }
     }
 }

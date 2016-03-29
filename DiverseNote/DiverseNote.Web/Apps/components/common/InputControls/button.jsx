@@ -1,8 +1,6 @@
 ﻿"use strict";
 
 var React = require('react');
-//var Link = require('react-router-component').Link;
-
 var Button = React.createClass({
     propTypes: {
         label: React.PropTypes.string.isRequired,
@@ -15,7 +13,7 @@ var Button = React.createClass({
 
     render: function () {
         var control;
-        //TODO: this should include an event property.  execute the event then navigate
+        //TODO: remove this and use window.redirect or react routing
         if (this.props.route !== undefined)
             control = (<div className="form-group"><a className="btn btn-primary" href={this.props.route}>{this.props.label}</a></div>);
         else {
@@ -27,7 +25,7 @@ var Button = React.createClass({
                 buttonType = 'button';
             
             control = (
-                <div className="form-group"><button type={buttonType} className="btn btn-primary" align="right" onClick={this.props.onclick }>{this.props.label}</button>
+                <div className="form-group"><button type={buttonType} className="btn btn-primary" align="right" onClick={this.props.onclick}>{this.props.label}</button>
                 </div>);
         }
         return (control);

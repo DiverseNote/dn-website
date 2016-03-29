@@ -8,24 +8,24 @@ var CandidateActions = require('../../actions/candidateActions.js');
 var Candidates = React.createClass({
     getInitialState: function () {
         return {
-            criteria: { keywords: '', ethnicity: [] },
-            searchResults:[]
+            criteria: { keywords: '', ethnicity: [], experience: [], gender: [], other: [] },
+            searchResults: []
         };
     },
 
-    setCriteriaState: function(event) {
+    setKeywordState: function(event) {
         var field = event.target.name;
         var value = event.target.value;
         this.state.criteria[field] = value;
         return this.setState({criteria: this.state.criteria});
     },
-    
-    searchCandidates: function () {
-        
+
+    searchCandidates: function (e) {
+        e.preventDefault();
         CandidateActions.search(this.state.criteria)
             .then(function searchSuccess(results) {
                 this.setState({ searchResults: results.hits });
-        }.bind(this))
+            }.bind(this))
             .catch(function searchError(err) {
                 console.error(err);
             });
@@ -35,11 +35,12 @@ var Candidates = React.createClass({
         var candidates = (
         <div className="container">                
                    <div className="row">
-                       <div className="col-xs-12 col-sm-4 col-md-4"><SearchCriteria criteria={this.state.criteria} onchange={this.setCriteriaState} onsubmit={this.searchCandidates} /></div>
+                       <div className="col-xs-12 col-sm-4 col-md-4"><SearchCriteria criteria={this.state.criteria} onchange={this.setKeywordState} onsubmit={this.searchCandidates} /></div>
                        <div className="col-xs-12 col-sm-8 col-md-8"><CandidateList candidates={this.state.searchResults} /></div>
                    </div>
            </div>
             );
+
         return (<FormLayout content={candidates} pageTitle="Recruiting" />);
     }
 });

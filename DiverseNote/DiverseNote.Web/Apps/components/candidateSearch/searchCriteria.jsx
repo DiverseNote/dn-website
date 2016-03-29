@@ -3,6 +3,7 @@
 var React = require('react');
 var TextBox = require('../Common/InputControls/textbox.jsx');
 var MultiSelect = require('../Common/InputControls/multiselect.jsx');
+var Select = require('../Common/InputControls/select.jsx');
 var Button = require('../common/InputControls/button.jsx');
 
 var SearchCriteria = React.createClass({
@@ -13,24 +14,20 @@ var SearchCriteria = React.createClass({
 
     render: function () {
 
-        var experienceItems = [{ "text": "Junior", "value": "junior" }, { "text": "Intermediate", "value": "intermediate" }, { "text": "Experienced", "value": "experienced" }, { "text": "Executive", "value": "executive" }];
-        var ethnicityItems = [{ "text": "African American", "value": "AfricanAmerican" }, { "text": "Asian", "value": "Asian" }, { "text": "Caucasian", "value": "Caucasian" }, { "text": "Hispanic", "value": "Hispanic" }, { "text": "Native American", "value": "NativeAmerican" }, { "text": "Pacific Islander", "value": "PacificIslander" }, { "text": "Other", "value": "Other" }];
-        var yesNoItems = [{ "text": "Yes", "value":"Y" }, { "text": "No", "value":"N" }];
-        var genderItems = [{ "text": "Male", "value": "M" }, { "text": "Female", "value": "F" }];
+        var experienceItems = [{ "label": "Junior", "value": "junior" }, { "label": "Intermediate", "value": "intermediate" }, { "label": "Senior", "value": "senior" }, { "label": "Executive", "value": "executive" }];
+        var ethnicityItems = [{ "label": "African American", "value": "africanamerican" }, { "label": "Asian", "value": "asian" }, { "label": "Caucasian", "value": "caucasian" }, { "label": "Hispanic", "value": "hispanic" }, { "label": "Native American", "value": "nativeamerican" }, { "label": "Pacific Islander", "value": "pacificislander" }, { "label": "Other", "value": "other" }];
+        var genderItems = [{ "label": "Male", "value": "male" }, { "label": "Female", "value": "female" }];
+        var otherClassifications = [{"label" :"Disabled", "value" : "disabled"}, {"label" : "US Military Veteran", "value" : "veteran"}, {"label" : "A Member of the LGBTQ Community", "value" : "lgbtq"}];
 
         return (
            <form>
                 <TextBox id="keywordInput" value={this.props.criteria.keywords} propname="keywords" onchange={this.props.onchange} label="Keywords" inputType="search" placeholder="Skills/Keywords" />
-                <TextBox id="roleInput" label="Role" inputType="search" placeholder="Role" />
-                <TextBox id="locationInput" label="Location" inputType="search" placeholder="Zip Code, City or State" />
-                <MultiSelect id="experienceInput" label="Experience" inputType="checkbox" items={experienceItems} />
+                <MultiSelect id="experienceInput" propname="experience" label="Experience" onchange={this.props.onchange} items={experienceItems} />
 
             <h3>Diversity Factors</h3>
-                <MultiSelect id="genderInput" label="Gender" inputType="checkbox" items={genderItems} />
-                <MultiSelect id="ethnicityInput" label="Ethnicity" inputType="checkbox" items={ethnicityItems} />
-                <MultiSelect id="disabledInput" label="Disabled?" inputType="checkbox" items={yesNoItems} />   
-                <MultiSelect id="veteranInput" label="US Military Veteran?" inputType="checkbox" items={yesNoItems} />
-                <MultiSelect id="lgbtqInput" label="A Member of the LGBTQ Community" inputType="checkbox" items={yesNoItems} />            
+                <MultiSelect id="genderInput" label="Gender" propname="gender" onchange={this.props.onchange} items={genderItems} />
+                <MultiSelect id="ethnicityInput" label="Ethnicity" propname="ethnicity" onchange={this.props.onchange} items={ethnicityItems} />
+                <MultiSelect id="disabledInput" label="Other Classifications" propname="other" onchange={this.props.onchange} items={otherClassifications} />  
            
                 <Button id="submitInput" submit="true" label="Search" onclick={this.props.onsubmit} />
            </form>

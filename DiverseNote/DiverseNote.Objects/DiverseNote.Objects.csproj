@@ -61,7 +61,7 @@
     <Compile Include="School.cs" />
     <Compile Include="Experience.cs" />
     <Compile Include="IEntity.cs" />
-    <Compile Include="Index\IndexCandidate - Copy.cs" />
+    <Compile Include="Index\IndexJob.cs" />
     <Compile Include="Index\IndexCandidate.cs" />
     <Compile Include="Index\IndexEntity.cs" />
     <Compile Include="Job.cs" />

@@ -12,5 +12,8 @@ namespace DiverseNote.Objects.Index
         public string Id { get; set; }
 
         public string Role { get; set; }
+
+        [JsonProperty("_tags")]
+        public IEnumerable<string> Tags { get; set; }
     }
 }
