@@ -8,13 +8,12 @@ namespace DiverseNote.Data.Indexing.DependencyInjection
 {
     public static class AutofacConfig
     {
-        public static IContainer RegisterTypes()
+        public static void RegisterTypes(ContainerBuilder container)
         {
-            var container = new ContainerBuilder();
             container.RegisterInstance(IndexTypeMapping.GetIndexTypeMapper());
             container.RegisterType<CandidateRepository>().As<ICandidateRepository>();
+            container.RegisterType<RecruiterRepository>().As<IRecruiterRepository>();
             container.RegisterType<AlgoliaClient>().AsSelf();
-            return container.Build();
         }
     }
 }

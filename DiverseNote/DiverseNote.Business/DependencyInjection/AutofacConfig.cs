@@ -1,20 +1,15 @@
 ﻿using Autofac;
-using DiverseNote.Data.EntityRepositories;
-using DiverseNote.Data.EntityRepositories.Interfaces;
+using DiverseNote.Business.Interfaces;
+using DiverseNote.Business.Providers;
 
 namespace DiverseNote.Business.DependencyInjection
 {
     public static class AutofacConfig
     {
-        public static IContainer RegisterTypes()
+        public static void RegisterTypes(ContainerBuilder container)
         {
-            Data.Indexing.DependencyInjection.AutofacConfig.RegisterTypes();
-
-            var container = new ContainerBuilder();
-            container.RegisterType<RecruiterRepository>().As<IRecruiterRepository>();
-            container.RegisterType<CandidateRepository>().As<ICandidateRepository>();
-
-            return container.Build();
+            Data.Indexing.DependencyInjection.AutofacConfig.RegisterTypes(container); 
+            container.RegisterType<CandidateProvider>().As<ICandidateProvider>();            
         }
     }
 }
