@@ -16,18 +16,21 @@ using Microsoft.Owin.Security.OAuth;
 using DiverseNote.Api.Models;
 using DiverseNote.Api.Providers;
 using DiverseNote.Api.Results;
+using DiverseNote.Objects;
+using DiverseNote.Business.Interfaces;
 
 namespace DiverseNote.Api.Controllers
-{
-    [Authorize]
+{    
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
+        private readonly IAccountProvider _accountProvider;
 
-        public AccountController()
+        public AccountController(IAccountProvider accountProvider)
         {
+            _accountProvider = accountProvider;
         }
 
         public AccountController(ApplicationUserManager userManager,
@@ -35,6 +38,20 @@ namespace DiverseNote.Api.Controllers
         {
             UserManager = userManager;
             AccessTokenFormat = accessTokenFormat;
+        }
+
+        // POST: api/account
+        public async Task<IHttpActionResult> Post([FromBody]UserAccount userInfo)
+        {
+            try
+            {
+                var id = await _accountProvider.RegisterUserAsync(userInfo);
+                return Ok(id);
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
 
         public ApplicationUserManager UserManager

@@ -15,7 +15,7 @@ var RegisterForm = React.createClass({
                             <TextBox id="firstNameInput" label="First Name" inputType="text" />
                             <TextBox id="lastNameInput" label="Last Name" inputType="text" />
                             <TextBox id="emailInput" label="Email Address" inputType="email" />
-                            <Button id="submitRegistrationInput" label="Create Account" route="#/CandidateRegister" />
+                            <Button id="submitRegistrationInput" label="Create Account" route="#/RegisterInterim" />
                 </form>
               </div>
            </div>

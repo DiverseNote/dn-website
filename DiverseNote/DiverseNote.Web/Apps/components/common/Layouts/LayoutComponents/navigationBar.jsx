@@ -8,7 +8,7 @@ var NavigationBar = React.createClass({
                     <nav className="navbar">
                       <div className="container">
                         <div className="navbar-header">
-                            <a href="#"><img src="../../Images/DN_LogoTag-small.png" /></a>                       
+                            <a href="#"><img src="Images/DN_LogoTag-small.png" /></a>                       
                         </div>
                           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul className="nav navbar-nav nav-links navbar-right">                                

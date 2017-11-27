@@ -100,9 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Apps\actions\candidateactions.js" />
+    <Content Include="Apps\actions\candidatesearchactions.js" />
     <Content Include="Apps\actions\typeaheadaction.js" />
-    <Content Include="Apps\actions\useraction.js" />
+    <Content Include="Apps\actions\accountaction.js" />
     <Content Include="Apps\constants\actionTypes.js" />
     <Content Include="Apps\index.html" />
     <Content Include="Global.asax" />
@@ -131,6 +131,9 @@
     <Content Include="Apps\components\candidateregister\candidateRegister.jsx" />
     <Content Include="Apps\components\candidateregister\candidateRegisterForm.jsx" />
     <Content Include="Apps\api\candidateApi.jsx" />
+    <Content Include="Apps\alt.jsx" />
+    <Content Include="Apps\actions\candidateactions.jsx" />
+    <Content Include="Apps\api\userApi.jsx" />
     <None Include="Apps\components\candidateSearch\candidateItem.jsx" />
     <Content Include="Apps\components\candidateSearch\candidates.jsx" />
     <Content Include="Apps\components\common\Layouts\LayoutComponents\navigationBar.jsx" />
@@ -148,6 +151,7 @@
     <Content Include="Apps\components\common\Layouts\formLayout.jsx" />
     <Content Include="Apps\components\common\InputControls\typeaheadbox.jsx" />
     <Content Include="Apps\components\common\InputControls\select.jsx" />
+    <Content Include="Apps\components\register\RegisterInterim.jsx" />
     <None Include="Apps\main.jsx" />
     <None Include="Apps\components\candidateSearch\candidateList.jsx" />
     <Content Include="Apps\components\candidateSearch\adminOptions.jsx" />
@@ -155,10 +159,12 @@
     <Content Include="Apps\components\common\routes.jsx" />
     <Content Include="Apps\components\register\register.jsx" />
     <Content Include="Apps\components\register\registerForm.jsx" />
+    <Content Include="Apps\stores\candidatestore.jsx" />
     <None Include="Properties\PublishProfiles\DiverseNote - Web Deploy.pubxml">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\PublishProfiles\diversenote-test - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\filesystem.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -170,6 +176,7 @@
     <Folder Include="Apps\components\about\" />
     <Folder Include="Apps\components\billing\" />
     <Folder Include="Apps\components\contact\" />
+    <Folder Include="Apps\components\container\" />
     <Folder Include="Apps\components\mentoring\" />
     <Folder Include="Apps\components\press\" />
     <Folder Include="Apps\components\recruiter\" />

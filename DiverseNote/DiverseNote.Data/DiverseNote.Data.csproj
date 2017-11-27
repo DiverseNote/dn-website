@@ -61,7 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseNames.cs" />
+    <Compile Include="EntityRepositories\AccountRepository.cs" />
     <Compile Include="EntityRepositories\CandidateRepository.cs" />
+    <Compile Include="EntityRepositories\Interfaces\IAccountRepository.cs" />
     <Compile Include="EntityRepositories\Interfaces\IRecruiterRepository.cs" />
     <Compile Include="EntityRepositories\RecruiterRepository.cs" />
     <Compile Include="EntityRepositories\Interfaces\ICandidateRepository.cs" />

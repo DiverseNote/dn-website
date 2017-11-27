@@ -33,12 +33,13 @@ namespace DiverseNote.Data.EntityRepositories
 
         protected override void SetMappings()
         {
-            BsonClassMap.RegisterClassMap<Candidate>(cm =>
-            {
-                cm.SetIgnoreExtraElements(true);//TODO: Important - Remove before first production push
-                cm.AutoMap();
-                cm.IdMemberMap.SetSerializer(new StringSerializer(BsonType.ObjectId));
-            });
+            if (!BsonClassMap.IsClassMapRegistered(typeof(Candidate)))
+                BsonClassMap.RegisterClassMap<Candidate>(cm =>
+                {
+                    cm.SetIgnoreExtraElements(true);//TODO: Important - Remove before first production push
+                    cm.AutoMap();
+                    cm.IdMemberMap.SetSerializer(new StringSerializer(BsonType.ObjectId));
+                });
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
 using Microsoft.Owin.Security.OAuth;
-using DiverseNote.Business.DependencyInjection;
+using DiverseNote.Business.DependencyInjectionConfigs;
 
 namespace DiverseNote.Api
 {

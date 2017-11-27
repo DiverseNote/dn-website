@@ -5,7 +5,7 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.WebApi;
 using DiverseNote.Api.App_Start;
-using DiverseNote.Business.DependencyInjection;
+using DiverseNote.Business.DependencyInjectionConfigs;
 
 namespace DiverseNote.Api
 {

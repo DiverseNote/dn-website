@@ -9,6 +9,7 @@ var App = require('./app.jsx');
 var Landing = require('../landing/landing.jsx');
 var Candidates = require('../candidateSearch/candidates.jsx');
 var CandidateRegister = require('../candidateregister/candidateRegister.jsx');
+var RegisterInterim = require('../register/registerInterim.jsx')
 var Register = require('../register/register.jsx');
 
 var routes = (
@@ -17,6 +18,7 @@ var routes = (
         <Route path="candidatesearch" component={Candidates} />
         <Route path="candidateregister" component={CandidateRegister} />
         <Route path="register" component={Register} />  
+        <Route path="registerinterim" component={RegisterInterim} />  
     </Route>
     );
 

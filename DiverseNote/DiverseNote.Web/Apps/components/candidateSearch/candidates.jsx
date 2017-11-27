@@ -3,7 +3,7 @@ var React = require('react');
 var CandidateList = require('./candidateList.jsx');
 var SearchCriteria = require('./searchCriteria.jsx');
 var FormLayout = require('../Common/Layouts/formLayout.jsx');
-var CandidateActions = require('../../actions/candidateActions.js');
+var CandidateActions = require('../../actions/candidateSearchActions.js');
 
 var Candidates = React.createClass({
     getInitialState: function () {

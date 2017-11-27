@@ -2,7 +2,7 @@
 using Autofac;
 using System.Web.Http;
 using System.Reflection;
-using DiverseNote.Business.DependencyInjection;
+using DiverseNote.Business.DependencyInjectionConfigs;
 
 namespace DiverseNote.Api.App_Start
 {

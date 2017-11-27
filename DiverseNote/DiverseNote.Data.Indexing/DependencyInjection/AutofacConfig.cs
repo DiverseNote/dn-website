@@ -11,7 +11,7 @@ namespace DiverseNote.Data.Indexing.DependencyInjection
         public static void RegisterTypes(ContainerBuilder container)
         {
             container.RegisterInstance(IndexTypeMapping.GetIndexTypeMapper());
-            container.RegisterType<CandidateRepository>().As<ICandidateRepository>();
+            container.RegisterType<CandidateRepository>().As<ICandidateRepository>().InstancePerLifetimeScope();
             container.RegisterType<RecruiterRepository>().As<IRecruiterRepository>();
             container.RegisterType<AlgoliaClient>().AsSelf();
         }

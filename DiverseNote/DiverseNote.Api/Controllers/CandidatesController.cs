@@ -27,7 +27,7 @@ namespace DiverseNote.Api.Controllers
         {
             try
             {
-                var candidate = await _candidateProvider.GetCandidateAsync(id, new UserInfo());
+                var candidate = await _candidateProvider.GetCandidateAsync(id, new UserAccount());
                 return Ok(candidate);
             }
             catch (Exception)
@@ -41,7 +41,7 @@ namespace DiverseNote.Api.Controllers
         {
             try
             {
-                var id = await _candidateProvider.AddCandidateAsync(candidate, new UserInfo());
+                var id = await _candidateProvider.AddCandidateAsync(candidate, new UserAccount());
                 return Ok(id);
             }
             catch (Exception)
@@ -55,7 +55,7 @@ namespace DiverseNote.Api.Controllers
         {
             try
             {
-                await _candidateProvider.UpdateCandidateAsync(candidate, new UserInfo());
+                await _candidateProvider.UpdateCandidateAsync(candidate, new UserAccount());
                 return Ok();
             }
             catch (Exception)
@@ -69,7 +69,7 @@ namespace DiverseNote.Api.Controllers
         {
             try
             {
-                await _candidateProvider.DeleteCandidateAsync(id, new UserInfo());
+                await _candidateProvider.DeleteCandidateAsync(id, new UserAccount());
                 return Ok();
             }
             catch (Exception)
